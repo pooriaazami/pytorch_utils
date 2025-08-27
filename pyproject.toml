@@ -4,4 +4,13 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "ipywidgets>=8.1.7",
+    "matplotlib>=3.10.5",
+    "notebook>=7.4.5",
+    "numpy>=2.3.2",
+    "pandas>=2.3.2",
+    "scikit-learn>=1.7.1",
+    "seaborn>=0.13.2",
+    "tqdm>=4.67.1",
+]
