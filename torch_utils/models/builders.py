@@ -70,7 +70,7 @@ def calculate_conv_output(layers, input_egde, input_channel):
 def build_conv_block_from_yaml(config):
     layers = []
     output = None
-    print(config)
+    
     for block in config['blocks']:
         match block['type']:
             case 'vgg':
