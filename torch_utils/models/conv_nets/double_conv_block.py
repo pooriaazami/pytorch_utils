@@ -12,8 +12,8 @@ class DoubleConvBlock(nn.Module):
                  out_channels: int,
                  kernel_size: int = 3,
                  pool_size: int = 2,
-                 padding: Literal['same', 'valid'] = 'same',
                  pool_type: Literal['max', 'avg', 'none'] | None = 'max',
+                 padding: Literal['same', 'valid'] = 'same',
                  normalization: bool = True,
                  activation_function: str = 'relu'
                  ):
@@ -26,7 +26,7 @@ class DoubleConvBlock(nn.Module):
                       kernel_size=kernel_size,
                       padding=pad_size),
             get_activation_function(activation_function),
-            nn.Conv2d(in_channels=in_channels, 
+            nn.Conv2d(in_channels=out_channels, 
                       out_channels=out_channels, 
                       kernel_size=kernel_size,
                       padding=pad_size),

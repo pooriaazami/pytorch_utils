@@ -1,1 +1,2 @@
 from .double_conv_block import DoubleConvBlock
+from .vgg_style_conv_block import VGGStyleConvBlock
