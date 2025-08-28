@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from common import get_activation_function
+from ..common import get_activation_function
 
 class DoubleConvBlock(nn.Module):
     def __init__(self,
@@ -18,6 +18,7 @@ class DoubleConvBlock(nn.Module):
                  activation_function: str = 'relu'
                  ):
         
+        super().__init__()
         pad_size = kernel_size // 2 if padding == 'same' else 0
         layers = [
             nn.Conv2d(in_channels=in_channels, 
