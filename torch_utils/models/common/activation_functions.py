@@ -15,3 +15,5 @@ def get_activation_function(function: str):
             return nn.PReLU()
         case 'leaky_relu':
             return nn.LeakyReLU()
+        case 'softmax':
+            return nn.Softmax(-1)
